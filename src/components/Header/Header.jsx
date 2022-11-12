@@ -123,21 +123,21 @@ const Header = () => {
               {settings.map(setting => {
                 const { name, url } = setting;
                 return (
-                  <MenuItem key={name} onClick={handleCloseUserMenu}>
-                    <Link
-                      to={url}
-                      style={{
-                        display: 'block',
-                        textDecoration: 'none',
+                  <Link
+                    to={url}
+                    style={{
+                      display: 'block',
+                      textDecoration: 'none',
+                      color: 'rgba(0, 0, 0, 0.87)',
+                      '&:hover': {
                         color: 'rgba(0, 0, 0, 0.87)',
-                        '&:hover': {
-                          color: 'rgba(0, 0, 0, 0.87)',
-                        },
-                      }}
-                    >
+                      },
+                    }}
+                  >
+                    <MenuItem key={name} onClick={handleCloseUserMenu}>
                       <Typography textAlign="center">{name}</Typography>
-                    </Link>
-                  </MenuItem>
+                    </MenuItem>
+                  </Link>
                 );
               })}
             </Menu>
